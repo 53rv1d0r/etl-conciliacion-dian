@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  etl_app:
+    build: .
+    container_name: etl_recaudo_app
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+      - ./src:/app/src
+      - ./service_account.json:/app/service_account.json
+    # Si usas Docker Desktop en Windows/Mac, puedes usar host.docker.internal 
+    # para comunicarte con el Postgres que corre en otro contenedor o en el host.
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

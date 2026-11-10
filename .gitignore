@@ -1,0 +1,19 @@
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de sistema / IDEs
+.vscode/
+.idea/
+.DS_Store
+
+# Reportes de Excel o CSVs de prueba generados localmente
+*.xlsx
+*.csv
+!config_ejemplo.csv  # (Opcional si quieres dejar algún ejemplo base)
